@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammad Hanan P — Unreal Engine Game Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14171c; --panel:#1b1f26; --panel-line:#2a2f38;
+    --text:#e9e7e1; --muted:#8b93a3; --accent:#4a9eff; --accent-dim:#2c4666;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#f3f2ef; --panel:#ffffff; --panel-line:#e2e0da;
+      --text:#1b1e24; --muted:#5c6270; --accent:#1f6fd6; --accent-dim:#d7e6fb;
+    }
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'Sora',sans-serif; line-height:1.55;
+    background-image:radial-gradient(var(--panel-line) 1px, transparent 1px);
+    background-size:26px 26px;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:0 24px;}
+  header.hero{padding:72px 0 40px;}
+  .kicker{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--accent); margin:0 0 14px;}
+  h1{font-size:clamp(34px,6vw,52px); font-weight:700; margin:0 0 8px; letter-spacing:-0.01em;}
+  .role{font-size:18px; color:var(--muted); margin:0 0 22px;}
+  .tag{font-size:17px; max-width:56ch; color:var(--text); opacity:.92;}
+  section{padding:34px 0; border-top:1px solid var(--panel-line);}
+  h2{font-size:14px; font-family:'JetBrains Mono',monospace; color:var(--muted); font-weight:500; margin:0 0 18px; letter-spacing:.02em;}
+  .skills{display:grid; grid-template-columns:1fr 1fr; gap:14px 28px;}
+  @media (max-width:560px){.skills{grid-template-columns:1fr;}}
+  .skill dt{font-weight:600; font-size:15px; margin-bottom:2px;}
+  .skill dd{margin:0; color:var(--muted); font-size:14.5px;}
+  .project{
+    background:var(--panel); border:1px solid var(--panel-line); border-radius:6px;
+    padding:24px; position:relative; overflow:hidden;
+  }
+  .project::before{
+    content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--accent);
+  }
+  .project h3{margin:0 0 6px; font-size:19px;}
+  .status{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); background:var(--accent-dim); padding:3px 9px; border-radius:3px; display:inline-block; margin-bottom:12px;}
+  .project p{margin:0; color:var(--muted); font-size:14.5px; max-width:56ch;}
+  .edu-row{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px;}
+  .edu-row h3{margin:0; font-size:17px;}
+  .edu-row span{color:var(--muted); font-family:'JetBrains Mono',monospace; font-size:13px;}
+  footer{padding:40px 0 60px; color:var(--muted); font-size:14px;}
+  footer a{color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-dim);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="kicker">// portfolio</p>
+    <h1>Muhammad Hanan P</h1>
+    <p class="role">Unreal Engine Game Developer — in training</p>
+    <p class="tag">Building gameplay systems in Unreal Engine — from character movement to environmental design — with C++ and Blueprint.</p>
+  </header>
+
+  <section>
+    <h2>ABOUT</h2>
+    <p style="max-width:60ch;">Game development student specializing in Unreal Engine, with hands-on training in C++ and Blueprint scripting. Skilled in building gameplay systems such as character movement and environmental design, along with health systems, shooting mechanics, UI, and level design. Currently developing an endless runner game to apply and strengthen these skills.</p>
+  </section>
+
+  <section>
+    <h2>SKILLS</h2>
+    <dl class="skills">
+      <div class="skill"><dt>Game Development</dt><dd>Unreal Engine, C++, Blueprint visual scripting, 3D game development</dd></div>
+      <div class="skill"><dt>Gameplay Systems</dt><dd>Character movement, health/damage systems, shooting mechanics, input handling</dd></div>
+      <div class="skill"><dt>Design</dt><dd>Level design, environmental design, landscape design, UI/HUD design, material creation and texturing</dd></div>
+      <div class="skill"><dt>Programming Fundamentals</dt><dd>C++ basics, problem-solving, debugging</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>PROJECT</h2>
+    <div class="project">
+      <span class="status">In Development</span>
+      <h3>Endless Runner Game</h3>
+      <p>An endless runner prototype built in Unreal Engine, applying Blueprint and C++ scripting for player movement, obstacle systems, and score tracking.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>EDUCATION</h2>
+    <div class="edu-row">
+      <h3>Unreal Engine Game Development</h3>
+      <span>EXR</span>
+    </div>
+  </section>
+
+  <footer>
+    Want to see this project in motion? <a href="mailto:">Reach out</a> — details coming soon.
+  </footer>
+</div>
+</body>
+</html>
