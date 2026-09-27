@@ -24,14 +24,19 @@
   body{
     margin:0; background:var(--bg); color:var(--text);
     font-family:'Sora',sans-serif; line-height:1.55;
-    background-image:radial-gradient(var(--panel-line) 1px, transparent 1px);
-    background-size:26px 26px;
+    position:relative;
   }
+  .deco{position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:0;}
+  .deco span{position:absolute; border:1.5px solid var(--panel-line); opacity:.9;}
+  .deco .sq{border-radius:3px;}
+  .deco .ci{border-radius:50%;}
+  .wrap{position:relative; z-index:1;}
   .wrap{max-width:760px; margin:0 auto; padding:0 24px;}
   header.hero{padding:72px 0 40px;}
   .kicker{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--accent); margin:0 0 14px;}
   h1{font-size:clamp(34px,6vw,52px); font-weight:700; margin:0 0 8px; letter-spacing:-0.01em;}
   .role{font-size:18px; color:var(--muted); margin:0 0 22px;}
+  .quote{font-size:clamp(22px,3.4vw,30px); font-weight:600; line-height:1.2; color:var(--accent); margin:2px 0 26px; font-style:normal;}
   .tag{font-size:17px; max-width:56ch; color:var(--text); opacity:.92;}
   section{padding:34px 0; border-top:1px solid var(--panel-line);}
   h2{font-size:14px; font-family:'JetBrains Mono',monospace; color:var(--muted); font-weight:500; margin:0 0 18px; letter-spacing:.02em;}
@@ -57,11 +62,22 @@
 </style>
 </head>
 <body>
+<div class="deco" aria-hidden="true">
+  <span class="sq" style="width:64px;height:64px; top:8%; left:6%;"></span>
+  <span class="ci" style="width:14px;height:14px; top:14%; left:82%;"></span>
+  <span class="sq" style="width:26px;height:26px; top:28%; left:90%;"></span>
+  <span class="sq" style="width:40px;height:40px; top:62%; left:3%;"></span>
+  <span class="ci" style="width:20px;height:20px; top:78%; left:12%;"></span>
+  <span class="sq" style="width:18px;height:18px; top:88%; left:88%;"></span>
+  <span class="ci" style="width:10px;height:10px; top:48%; left:94%;"></span>
+  <span class="sq" style="width:30px;height:30px; top:6%; left:46%;"></span>
+</div>
 <div class="wrap">
   <header class="hero">
     <p class="kicker">// portfolio</p>
     <h1>Muhammad Hanan P</h1>
     <p class="role">Unreal Engine Game Developer — in training</p>
+    <p class="quote">Turning ideas<br>into playable worlds.</p>
     <p class="tag">Building gameplay systems in Unreal Engine — from character movement to environmental design — with C++ and Blueprint.</p>
   </header>
 
