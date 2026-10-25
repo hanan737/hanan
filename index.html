@@ -57,6 +57,12 @@
   .edu-row{display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px;}
   .edu-row h3{margin:0; font-size:17px;}
   .edu-row span{color:var(--muted); font-family:'JetBrains Mono',monospace; font-size:13px;}
+  .gallery{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px;}
+  @media (max-width:560px){.gallery{grid-template-columns:1fr;}}
+  .gallery img, .sysvideo{width:100%; display:block; border-radius:6px; border:1px solid var(--panel-line); background:var(--panel);}
+  .gallery img{aspect-ratio:16/10; object-fit:cover;}
+  .sysvideo{margin-top:14px; max-height:420px;}
+  .note{color:var(--muted); font-size:13.5px; margin:0;}
   footer{padding:40px 0 60px; color:var(--muted); font-size:14px;}
   footer a{color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-dim);}
 </style>
@@ -97,11 +103,31 @@
   </section>
 
   <section>
-    <h2>PROJECT</h2>
+    <h2>PROJECTS</h2>
     <div class="project">
       <span class="status">In Development</span>
       <h3>Endless Runner Game</h3>
       <p>An endless runner prototype built in Unreal Engine, applying Blueprint and C++ scripting for player movement, obstacle systems, and score tracking.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>GAMEPLAY SYSTEMS</h2>
+    <div class="project">
+      <h3>Key &amp; Door Interaction System</h3>
+      <p>An interactive system built in Unreal Engine: the player picks up a key and uses it to unlock a door.</p>
+      <video class="sysvideo" src="key-door.mp4" controls muted playsinline preload="metadata"></video>
+    </div>
+  </section>
+
+  <section>
+    <h2>ENVIRONMENT SAMPLES</h2>
+    <p class="note">Sample / reference images of house interior and environment, shown for demo purposes.</p>
+    <div class="gallery">
+      <img src="env-1.jpg" alt="Environment sample 1" onerror="this.style.display='none'">
+      <img src="env-2.webp" alt="Environment sample 2" onerror="this.style.display='none'">
+      <img src="env-3.jpeg" alt="Environment sample 3" onerror="this.style.display='none'">
+      <img src="env-4.jpeg" alt="Environment sample 4" onerror="this.style.display='none'">
     </div>
   </section>
 
